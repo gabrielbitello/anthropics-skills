@@ -1,6 +1,6 @@
 {
-  "name": "anthropic-skills",
-  "version": "0.1.0",
+  "name": "anthropics-skills",
+  "version": "0.1.1",
   "description": "All example skills from anthropics/skills, bundled as a single ZCode plugin (document processing, design, web artifacts, MCP builder and more)",
   "author": {
     "name": "gabrielbitello",
