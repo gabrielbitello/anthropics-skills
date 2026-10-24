@@ -1,0 +1,18 @@
+{
+  "name": "gabrielbitello-skills",
+  "metadata": {
+    "description": "ZCode marketplace for the anthropics/skills fork, auto-synced from upstream",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "anthropic-skills",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "All example skills from anthropics/skills, bundled as a single ZCode plugin (document processing, design, web artifacts, MCP builder and more)",
+      "displayName": "Anthropic Skills",
+      "description_i18n": { "pt-BR": "Todas as skills de exemplo do anthropics/skills em um único plugin ZCode (documentos, design, artefatos web, MCP builder e mais)" },
+      "category": "productivity"
+    }
+  ]
+}

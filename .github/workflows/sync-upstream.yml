@@ -1,0 +1,47 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/anthropics/skills.git
+          git fetch upstream main
+
+      - name: Merge upstream main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge upstream/main --no-edit
+
+      - name: Bump plugin version when skills changed
+        run: |
+          if git diff --name-only 'HEAD@{1}' HEAD | grep -q '^skills/'; then
+            old=$(jq -r .version .zcode-plugin/plugin.json)
+            IFS=. read -r a b c <<< "$old"
+            new="$a.$b.$((c + 1))"
+            jq --arg v "$new" '.version = $v' .zcode-plugin/plugin.json > tmp.json && mv tmp.json .zcode-plugin/plugin.json
+            jq --arg v "$new" '.metadata.version = $v | .plugins[0].version = $v' marketplace.json > tmp.json && mv tmp.json marketplace.json
+            git add .zcode-plugin/plugin.json marketplace.json
+            git commit -m "chore: bump plugin version to $new (upstream sync)"
+          fi
+
+      - name: Push
+        run: git push
