@@ -29,18 +29,22 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # keep our marketplace catalog on conflict; upstream's is not ZCode-format
+          git config merge.keep-ours.driver true
           git merge upstream/main --no-edit
 
-      - name: Bump plugin version when skills changed
+      - name: Sync manifests and bump versions when skills changed
         run: |
           if git diff --name-only 'HEAD@{1}' HEAD | grep -q '^skills/'; then
-            old=$(jq -r .version .zcode-plugin/plugin.json)
-            IFS=. read -r a b c <<< "$old"
-            new="$a.$b.$((c + 1))"
-            jq --arg v "$new" '.version = $v' .zcode-plugin/plugin.json > tmp.json && mv tmp.json .zcode-plugin/plugin.json
-            jq --arg v "$new" '.metadata.version = $v | .plugins[0].version = $v' marketplace.json > tmp.json && mv tmp.json marketplace.json
-            git add .zcode-plugin/plugin.json marketplace.json
-            git commit -m "chore: bump plugin version to $new (upstream sync)"
+            for f in skills/*/.zcode-plugin/plugin.json; do
+              old=$(jq -r .version "$f")
+              IFS=. read -r a b c <<< "$old"
+              new="$a.$b.$((c + 1))"
+              jq --arg v "$new" '.version = $v' "$f" > tmp.json && mv tmp.json "$f"
+            done
+            node scripts/generate-marketplace.mjs
+            git add skills .claude-plugin/marketplace.json
+            git diff --cached --quiet || git commit -m "chore: bump skill plugin versions (upstream sync)"
           fi
 
       - name: Push
