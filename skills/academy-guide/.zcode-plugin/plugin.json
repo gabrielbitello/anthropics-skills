@@ -1,6 +1,6 @@
 {
   "name": "academy-guide",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "> Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy",
   "skills": "."
 }

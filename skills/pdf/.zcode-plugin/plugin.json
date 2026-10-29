@@ -1,6 +1,6 @@
 {
   "name": "pdf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rota",
   "skills": "."
 }

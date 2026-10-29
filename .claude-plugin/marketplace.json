@@ -8,133 +8,133 @@
     {
       "name": "academy-guide",
       "source": "./skills/academy-guide",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "> Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy",
       "category": "other"
     },
     {
       "name": "algorithmic-art",
       "source": "./skills/algorithmic-art",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or",
       "category": "other"
     },
     {
       "name": "brand-guidelines",
       "source": "./skills/brand-guidelines",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting",
       "category": "other"
     },
     {
       "name": "canvas-design",
       "source": "./skills/canvas-design",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create ori",
       "category": "other"
     },
     {
       "name": "claude-api",
       "source": "./skills/claude-api",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "|- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file;",
       "category": "developer-tools"
     },
     {
       "name": "discernment-nudge",
       "source": "./skills/discernment-nudge",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "> After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, an",
       "category": "other"
     },
     {
       "name": "doc-coauthoring",
       "source": "./skills/doc-coauthoring",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This wor",
       "category": "other"
     },
     {
       "name": "docx",
       "source": "./skills/docx",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "\"Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document',",
       "category": "productivity"
     },
     {
       "name": "frontend-design",
       "source": "./skills/frontend-design",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defau",
       "category": "other"
     },
     {
       "name": "internal-comms",
       "source": "./skills/internal-comms",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal com",
       "category": "other"
     },
     {
       "name": "mcp-builder",
       "source": "./skills/mcp-builder",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate externa",
       "category": "developer-tools"
     },
     {
       "name": "pdf",
       "source": "./skills/pdf",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rota",
       "category": "productivity"
     },
     {
       "name": "pptx",
       "source": "./skills/pptx",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "\"Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting t",
       "category": "productivity"
     },
     {
       "name": "skill-creator",
       "source": "./skills/skill-creator",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill",
       "category": "developer-tools"
     },
     {
       "name": "slack-gif-creator",
       "source": "./skills/slack-gif-creator",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a G",
       "category": "other"
     },
     {
       "name": "theme-factory",
       "source": "./skills/theme-factory",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact t",
       "category": "other"
     },
     {
       "name": "web-artifacts-builder",
       "source": "./skills/web-artifacts-builder",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag",
       "category": "developer-tools"
     },
     {
       "name": "webapp-testing",
       "source": "./skills/webapp-testing",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser l",
       "category": "developer-tools"
     },
     {
       "name": "xlsx",
       "source": "./skills/xlsx",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "\"Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e",
       "category": "productivity"
     }
